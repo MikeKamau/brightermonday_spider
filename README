@@ -1,0 +1,12 @@
+PREREQUISITES
+==============
+This requires python and the scrapy framework installed.
+
+USAGE
+==============
+This scripts scraps all the IT and Telcom jobs on brightermonda.co.ke, to run it type:
+
+scrapy crawl craig -o items.csv -t csv
+
+The above command will save the output in a csv file named items.csv
+
