@@ -15,10 +15,10 @@ class MySpider(CrawlSpider):
     def parse_items(self, response):
         hxs = Selector(response)
         titles = hxs.xpath('//a[starts-with(@title, "More")]')
-	items = []
+		  items = []
         for title in titles:
            item = BrightermondaySampleItem()
            item["link"] = title.xpath("@href").extract()
-	   item["title"] = title.xpath("h4/text()").extract()
+	   	  item["title"] = title.xpath("h4/text()").extract()
            items.append(item)
-	return(items)
+	     return(items)
