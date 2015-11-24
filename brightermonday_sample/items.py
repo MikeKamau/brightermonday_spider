@@ -9,5 +9,6 @@ from scrapy.item import Item, Field
 
 
 class BrightermondaySampleItem(Item):
+	link = Field()
 	title = Field()
- 	link = Field()
+	desc = Field()
