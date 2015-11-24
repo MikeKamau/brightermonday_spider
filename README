@@ -6,7 +6,7 @@ USAGE
 ==============
 This scripts scraps all the IT and Telcom jobs on brightermonda.co.ke, to run it type:
 
-scrapy crawl craig -o items.csv -t csv
+scrapy crawl bright -o jobs.csv -t csv
 
 The above command will save the output in a csv file named items.csv
 
