@@ -6,7 +6,7 @@ from brightermonday_sample.items import BrightermondaySampleItem
 class MySpider(CrawlSpider):
 	name = "bright"
 	allowed_domains = ["brightermonday.co.ke"]
-	start_urls = ["https://brightermonday.co.ke/search/jobs-in-it-telecoms"]
+	start_urls = ["http://brightermonday.co.ke/search/jobs-in-it-telecoms"]
 
 	rules = (
 		
@@ -23,6 +23,6 @@ class MySpider(CrawlSpider):
 		hxs = Selector(response)
 		item = BrightermondaySampleItem()
 		item['link'] = response.url
-		item['title'] = hxs.xpath('//h2/text()').extract()
-		item['desc'] = hxs.xpath('//article[@class="resultDetail"]/p/text()').extract()
+		item['title'] = hxs.xpath('//h2/text()').extract()[0]
+		item['desc'] = hxs.xpath('//article[@class="resultDetail"]/p/text()').extract()[0]
 		return item
